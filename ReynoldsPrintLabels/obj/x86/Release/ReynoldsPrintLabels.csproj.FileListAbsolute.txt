@@ -1,0 +1,18 @@
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\bin\Release\ReynoldsPrintLabels.exe.config
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\bin\Release\ReynoldsPrintLabels.exe
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\bin\Release\ReynoldsPrintLabels.pdb
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.Form1.resources
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.Properties.Resources.resources
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.csproj.GenerateResource.Cache
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.exe
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.pdb
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.csprojResolveAssemblyReference.cache
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Release\ReynoldsPrintLabels.exe.config
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.exe
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.pdb
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Release\ReynoldsPrintLabels.exe
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Release\ReynoldsPrintLabels.pdb
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.csprojResolveAssemblyReference.cache
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.Form1.resources
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.Properties.Resources.resources
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Release\ReynoldsPrintLabels.csproj.GenerateResource.Cache

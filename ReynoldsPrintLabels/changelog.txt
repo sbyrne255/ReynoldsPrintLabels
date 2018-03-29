@@ -1,0 +1,14 @@
+﻿Version 1.1.0
+	-Features:
+		Added CSV Parser using the .net VB library to parse quoted strings.
+	-Bugs:
+		Fixed: Issue when deleting file the delete calls the changeEvent and errors out; solution was if exists...
+Version 1.0.4
+	-Features:
+	-Bugs:
+		File delete forces 
+Version 1.0.0
+	-Features:
+		Base code written and designed.
+	-Bugs:
+		Printer refresh button duplicates printers

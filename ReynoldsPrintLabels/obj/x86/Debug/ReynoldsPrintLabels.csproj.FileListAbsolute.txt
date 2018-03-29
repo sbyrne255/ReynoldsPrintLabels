@@ -1,0 +1,16 @@
+c:\users\steven.admin\documents\visual studio 2010\Projects\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.exe
+c:\users\steven.admin\documents\visual studio 2010\Projects\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.pdb
+c:\users\steven.admin\documents\visual studio 2010\Projects\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Form1.resources
+c:\users\steven.admin\documents\visual studio 2010\Projects\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Properties.Resources.resources
+c:\users\steven.admin\documents\visual studio 2010\Projects\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.csproj.GenerateResource.Cache
+c:\users\steven.admin\documents\visual studio 2010\Projects\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.exe
+c:\users\steven.admin\documents\visual studio 2010\Projects\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.pdb
+c:\users\steven.admin\documents\visual studio 2010\Projects\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.exe.config
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.exe.config
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.exe
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.pdb
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.exe
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.pdb
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Form1.resources
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Properties.Resources.resources
+C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.csproj.GenerateResource.Cache
