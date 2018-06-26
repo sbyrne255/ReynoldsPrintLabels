@@ -120,7 +120,7 @@ namespace ReynoldsPrintLabels
                         parser.Close();
                         try
                         {
-                            System.Threading.Thread.Sleep(300);//Sleeps 1 second
+                            System.Threading.Thread.Sleep(300);//Sleeps 3 second
                             File.Delete(e.FullPath);
                         }
                         catch (Exception er) { logger(er.ToString()); }
@@ -147,8 +147,11 @@ namespace ReynoldsPrintLabels
                         printDoc.PrintPage += new PrintPageEventHandler(printDoc_PrintPage);
 
                         printDoc.Print();
+
+                        printDoc.Dispose();
                     }
                     catch (Exception err) { logger("Problem with printing array " + err.ToString()); }
+                    System.Threading.Thread.Sleep(100);
 
                 } while (more_pages == true);
 
@@ -169,9 +172,9 @@ namespace ReynoldsPrintLabels
                 label_count = 1;
                 more_pages = false;
 
-                foreach (List<string> subList in labels)
+                foreach (List<string> subList in labels)//For each entry in our total label list...
                 {
-                    //if (label_count == 1 && more_pages == false) { label_count++; continue; }//Skip first row...
+                    //If there are multiple pages to print...
                     if (label_count == 13)
                     {
                         label_count = 1;
@@ -193,7 +196,9 @@ namespace ReynoldsPrintLabels
                         label_count++;
                     }
 
+
                 }
+                labels.Clear();
 
                 Graphics g = e.Graphics;
 

@@ -1,0 +1,3 @@
+2018-06-26-17:28:44 :: System.ArgumentException: The directory name C:\Users\Steven.admin\Desktop\demo\ is invalid.
+   at System.IO.FileSystemWatcher.set_Path(String value)
+   at ReynoldsPrintLabels.Form1.watch() in N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\Form1.cs:line 44

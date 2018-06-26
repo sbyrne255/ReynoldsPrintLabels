@@ -14,3 +14,11 @@ C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels 
 C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Form1.resources
 C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Properties.Resources.resources
 C:\Users\Steven.admin\Documents\Visual Studio 2010\Projects\ReynoldsPrintLabels - Copy\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.csproj.GenerateResource.Cache
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.exe.config
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.exe
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.pdb
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.exe
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.pdb
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Form1.resources
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Properties.Resources.resources
+N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.csproj.GenerateResource.Cache
