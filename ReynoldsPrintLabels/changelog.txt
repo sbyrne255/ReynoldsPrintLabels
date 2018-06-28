@@ -1,4 +1,14 @@
-﻿Version 1.1.0
+﻿Version 1.1.2
+	-Features:
+		Moved code to clean up functions and make more readable for trouble shooting.
+	-Bugs:
+		Fixed: Issue when printing multi-page documents caused by previous 'fix' in version 1.1.1
+Version 1.1.1
+	-Features:
+		Close printer object that was left open potentially causing a memory leak.
+	-Bugs:
+		Fixed: Issue when printing specific files were memorry leaked cause exit without error...
+Version 1.1.0
 	-Features:
 		Added CSV Parser using the .net VB library to parse quoted strings.
 	-Bugs:

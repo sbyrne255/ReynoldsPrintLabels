@@ -28,6 +28,8 @@ namespace ReynoldsPrintLabels
         {
             InitializeComponent();
         }
+
+
         private List<List<string>> labels = new List<List<string>>();
         private FileSystemWatcher watcher = new FileSystemWatcher();
         private int label_count = 1;
@@ -36,6 +38,87 @@ namespace ReynoldsPrintLabels
         private bool has_indexing = false;
 
         private int customer_index, home_index, business_index, quantity_index, part_index, desc_index, group_index, date_index, po_number_index, category_index;
+        private void setLabelList(FileSystemEventArgs e) {
+            try
+            {
+                if (File.Exists(e.FullPath))
+                {
+                    System.Threading.Thread.Sleep(3000);//Sleeps 3 seconds so file can be fully written...
+                    has_indexing = false;
+                    labels = new List<List<string>>();
+
+                    TextFieldParser parser = new TextFieldParser(e.FullPath);
+                    parser.HasFieldsEnclosedInQuotes = true;
+                    parser.SetDelimiters(",");
+                    string[] fields;
+
+                    while (!parser.EndOfData)
+                    {
+                        fields = parser.ReadFields();
+                        if (has_indexing == false)
+                        {
+                            int c = 0;
+                            foreach (var value in fields)
+                            {
+                                switch (value)
+                                {
+                                    case "CUST-NAME":
+                                        customer_index = c;
+                                        break;
+                                    case "RES-PHONE":
+                                        home_index = c;
+                                        break;
+                                    case "BUS-PHONE":
+                                        business_index = c;
+                                        break;
+                                    case "QORD":
+                                        quantity_index = c;
+                                        break;
+                                    case "PART-NO-1":
+                                        part_index = c;
+                                        break;
+                                    case "DESC":
+                                        desc_index = c;
+                                        break;
+                                    case "GRP-DV":
+                                        group_index = c;
+                                        break;
+                                    case "PO-DATE":
+                                        date_index = c;
+                                        break;
+                                    case "PO-NO":
+                                        po_number_index = c;
+                                        break;
+                                    case "SO-NO":
+                                        category_index = c;
+                                        break;
+                                }
+                                c++;
+                            }
+                            has_indexing = true;
+                        }
+
+                        //MessageBox.Show(string.Join("", fields));
+                        if (string.Join("", fields).Length <= 0)
+                        {
+                            continue;
+                        } else {
+                            //NAME,                     PART NUM            QUANTITY                    HOME            BUSINESS                DESC                    GROUP               DATE            ORDER NUM               INVTORY NUM
+                            labels.Add(new List<string> { fields[customer_index], fields[part_index], fields[quantity_index], fields[home_index], fields[business_index], fields[desc_index], fields[group_index], fields[date_index], fields[po_number_index], fields[category_index] });
+                        }
+                    }
+                    parser.Close();
+                    try
+                    {
+                        System.Threading.Thread.Sleep(300);//Sleeps 3 second
+                        File.Delete(e.FullPath);
+                    }
+                    catch (Exception er) { logger(er.ToString()); }
+                }
+            }
+            catch (Exception err) { logger("Problem with getting array data " + err.ToString()); }//Probably getting an error because it fires the delete event (a file change) but then the file isn't there...
+
+        }
 
         private void watch()
         {
@@ -53,81 +136,8 @@ namespace ReynoldsPrintLabels
         }
         private void OnChanged(object source, FileSystemEventArgs e)
         {
-            try
-            {
-                try
-                {
-                    if (File.Exists(e.FullPath))
-                    {
-                        System.Threading.Thread.Sleep(3000);//Sleeps 3 seconds so file can be fully written...
-                        has_indexing = false;
-                        labels = new List<List<string>>();
-
-                        TextFieldParser parser = new TextFieldParser(e.FullPath);
-                        parser.HasFieldsEnclosedInQuotes = true;
-                        parser.SetDelimiters(",");
-                        string[] fields;
-
-                        while (!parser.EndOfData)
-                        {
-                            fields = parser.ReadFields();
-                            if (has_indexing == false)
-                            {
-                                int c = 0;
-                                foreach (var value in fields)
-                                {
-                                    switch (value)
-                                    {
-                                        case "CUST-NAME":
-                                            customer_index = c;
-                                            break;
-                                        case "RES-PHONE":
-                                            home_index = c;
-                                            break;
-                                        case "BUS-PHONE":
-                                            business_index = c;
-                                            break;
-                                        case "QORD":
-                                            quantity_index = c;
-                                            break;
-                                        case "PART-NO-1":
-                                            part_index = c;
-                                            break;
-                                        case "DESC":
-                                            desc_index = c;
-                                            break;
-                                        case "GRP-DV":
-                                            group_index = c;
-                                            break;
-                                        case "PO-DATE":
-                                            date_index = c;
-                                            break;
-                                        case "PO-NO":
-                                            po_number_index = c;
-                                            break;
-                                        case "SO-NO":
-                                            category_index = c;
-                                            break;
-                                    }
-                                    c++;
-                                }
-                                has_indexing = true;
-                            }
-
-                            //NAME,                     PART NUM            QUANTITY                    HOME            BUSINESS                DESC                    GROUP               DATE            ORDER NUM               INVTORY NUM
-                            labels.Add(new List<string> { fields[customer_index], fields[part_index], fields[quantity_index], fields[home_index], fields[business_index], fields[desc_index], fields[group_index], fields[date_index], fields[po_number_index], fields[category_index] });
-                        }
-                        parser.Close();
-                        try
-                        {
-                            System.Threading.Thread.Sleep(300);//Sleeps 3 second
-                            File.Delete(e.FullPath);
-                        }
-                        catch (Exception er) { logger(er.ToString()); }
-                    }
-                }
-                catch (Exception err) { logger("Problem with getting array data " + err.ToString()); }//Probably getting an error because it fires the delete event (a file change) but then the file isn't there...
-
+            //Reads CSV into labels list and maps column names...
+            setLabelList(e);
                 do
                 {
                     try
@@ -135,31 +145,23 @@ namespace ReynoldsPrintLabels
                         PaperSource oPSource = new PaperSource();
                         oPSource.RawKind = (int)PaperSourceKind.Manual;//Which tray...
 
-
                         PrintDocument printDoc = new PrintDocument();
                         printDoc.DefaultPageSettings.Landscape = false;
                         printDoc.DefaultPageSettings.Margins.Left = Convert.ToInt32(Properties.Settings.Default.margin_left); //100 = 1 inch = 2.54 cm
                         printDoc.DefaultPageSettings.PaperSource = oPSource;
                         printDoc.DocumentName = "Reynolds Labels"; //this can affect name of output PDF file if printer is a PDF printer
-                        //printDoc.PrinterSettings.PrinterName = "MARKETING (HP Color LaserJet MFP M577)";//Connect by printer name I believe this hsould work for Lexmark Univ/Lexmark net 506 ect...
-                        printDoc.PrinterSettings.PrinterName = Properties.Settings.Default.printer;//Connect by printer name I believe this hsould work for Lexmark Univ/Lexmark net 506 ect...
+                        printDoc.PrinterSettings.PrinterName = Properties.Settings.Default.printer;//Connect by printer name
 
                         printDoc.PrintPage += new PrintPageEventHandler(printDoc_PrintPage);
 
                         printDoc.Print();
-
                         printDoc.Dispose();
                     }
                     catch (Exception err) { logger("Problem with printing array " + err.ToString()); }
                     System.Threading.Thread.Sleep(100);
 
                 } while (more_pages == true);
-
-            }
-            catch (Exception er)
-            {
-                logger(er.ToString());
-            }
+                labels.Clear();
             
 
 
@@ -198,7 +200,6 @@ namespace ReynoldsPrintLabels
 
 
                 }
-                labels.Clear();
 
                 Graphics g = e.Graphics;
 
@@ -212,6 +213,8 @@ namespace ReynoldsPrintLabels
             }
             catch (Exception er) { logger(er.ToString()); }
         }
+        
+        
         private void Form1_Load(object sender, EventArgs e)
         {
             try
@@ -347,7 +350,6 @@ namespace ReynoldsPrintLabels
             g.DrawString(textToPrint, font, Brushes.Black, x1, y1);
             e.HasMorePages = false; //set to true to continue printing next page
         }
-
         private void Form1_Resize(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Minimized)

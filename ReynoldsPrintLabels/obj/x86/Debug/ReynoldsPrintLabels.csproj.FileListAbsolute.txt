@@ -22,3 +22,11 @@ N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\D
 N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Form1.resources
 N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Properties.Resources.resources
 N:\Public Software\Custom Software\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.csproj.GenerateResource.Cache
+C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.exe.config
+C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.exe
+C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.pdb
+C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.exe
+C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\bin\Debug\ReynoldsPrintLabels.pdb
+C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Form1.resources
+C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Properties.Resources.resources
+C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.csproj.GenerateResource.Cache
