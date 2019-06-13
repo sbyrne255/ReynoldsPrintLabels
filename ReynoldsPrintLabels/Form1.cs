@@ -37,7 +37,7 @@ namespace ReynoldsPrintLabels
         private bool more_pages = false;
         private bool has_indexing = false;
 
-        private int customer_index, home_index, business_index, quantity_index, part_index, desc_index, group_index, date_index, po_number_index, category_index;
+        private int customer_index, home_index, business_index, quantity_index, part_index, desc_index, group_index, date_index, po_number_index, category_index, po_customer_number_index;
         private void setLabelList(FileSystemEventArgs e) {
             try
             {
@@ -92,19 +92,20 @@ namespace ReynoldsPrintLabels
                                     case "SO-NO":
                                         category_index = c;
                                         break;
+                                    case "CUST-PO-NO-CAT":
+                                        po_customer_number_index = c;
+                                        break;
                                 }
                                 c++;
                             }
                             has_indexing = true;
                         }
-
-                        //MessageBox.Show(string.Join("", fields));
                         if (string.Join("", fields).Length <= 0)
                         {
                             continue;
                         } else {
-                            //NAME,                     PART NUM            QUANTITY                    HOME            BUSINESS                DESC                    GROUP               DATE            ORDER NUM               INVTORY NUM
-                            labels.Add(new List<string> { fields[customer_index], fields[part_index], fields[quantity_index], fields[home_index], fields[business_index], fields[desc_index], fields[group_index], fields[date_index], fields[po_number_index], fields[category_index] });
+                                                                    //NAME,              PART NUM              QUANTITY                HOME                 BUSINESS                DESC                GROUP               DATE                ORDER NUM               INVTORY NUM                 CUSTOMER PO FOR AB
+                            labels.Add(new List<string> { fields[customer_index], fields[part_index], fields[quantity_index], fields[home_index], fields[business_index], fields[desc_index], fields[group_index], fields[date_index], fields[po_number_index], fields[category_index], fields[po_customer_number_index]});
                         }
                     }
                     parser.Close();
@@ -187,8 +188,8 @@ namespace ReynoldsPrintLabels
                     else
                     {
                         textToPrint += String.Format(
-                        "CUST: {0} \nHOME: {1} WORK: {2} \n({3})-   {4}  {5} {6}\nODate: {7} ORD#: {8} INV/RO#: {9}",
-                        subList[0], subList[3], subList[4], subList[2], subList[1], subList[5], subList[6], subList[7], subList[8], subList[9]);
+                        "CUST: {0} | PO#: {10}\nHOME: {1} WORK: {2} \n({3})-   {4}  {5} {6}\nODate: {7} ORD#: {8} INV/RO#: {9}",
+                        subList[0], subList[3], subList[4], subList[2], subList[1], subList[5], subList[6], subList[7], subList[8], subList[9], subList[10]);
 
                         for (int i = 0; i < Properties.Settings.Default.lines; i++)
                         {
@@ -328,7 +329,7 @@ namespace ReynoldsPrintLabels
         {
             Graphics g = e.Graphics;
             //Customer name, PO, Home #, Work #, Quantity, Part Number, description, Group, order date, Ordre Number(PO), SO-NO (inventory/RO#)
-            string textToPrint = String.Format("CUST: {0} PO#: {1}\nHOME: {2} WORK: {3} \n({4})-   {5}  {6} {7}\nODate: {8} ORD#: {9} INV/RO#: {10}",
+            string textToPrint = String.Format("CUST: {0} | PO#: {10}\nHOME: {1} WORK: {2} \n({3})-   {4}  {5} {6}\nODate: {7} ORD#: {8} INV/RO#: {9}",
                 "COL-A", count.ToString(), "COL-E", "COL-F", "COL-D", "COL-C", "COL-N", "COL-O", "COL-K", "COL-P", "COL-H");
             for (int i = 0; i < count; i++)
             {
@@ -336,7 +337,7 @@ namespace ReynoldsPrintLabels
                 {
                     textToPrint += "\n";
                 }
-                textToPrint += String.Format("CUST: {0} PO#: {1}\nHOME: {2} WORK: {3} \n({4})-   {5}  {6} {7}\nODate: {8} ORD#: {9} INV/RO#: {10}",
+                textToPrint += String.Format("CUST: {0} | PO#: {10}\nHOME: {1} WORK: {2} \n({3})-   {4}  {5} {6}\nODate: {7} ORD#: {8} INV/RO#: {9}",
                     "COL-A", count.ToString(), "COL-E", "COL-F", "COL-D", "COL-C", "COL-N", "COL-O", "COL-K", "COL-P", "COL-H");
             }
 

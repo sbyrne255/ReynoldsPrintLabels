@@ -30,3 +30,4 @@ C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\Reynol
 C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Form1.resources
 C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.Properties.Resources.resources
 C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.csproj.GenerateResource.Cache
+C:\Users\Steven.admin\Desktop\Local Project Files\GIT\ReynoldsPrintLabels\ReynoldsPrintLabels\obj\x86\Debug\ReynoldsPrintLabels.csprojResolveAssemblyReference.cache

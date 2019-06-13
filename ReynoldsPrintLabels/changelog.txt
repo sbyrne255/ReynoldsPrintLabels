@@ -1,4 +1,7 @@
-﻿Version 1.1.2
+﻿Version 1.1.3
+	-Features:
+		Added CUSTOMER PO Number from reynolds for Auto Body who uses PO-CUST-NO-CAT for their customer name.
+Version 1.1.2
 	-Features:
 		Moved code to clean up functions and make more readable for trouble shooting.
 	-Bugs:
